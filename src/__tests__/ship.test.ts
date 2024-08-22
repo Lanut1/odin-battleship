@@ -4,6 +4,7 @@ describe('Ship', () => {
   test('should initialize with correct length and default values', () => {
     const ship = new Ship(3);
     expect(ship.length).toBe(3);
+    expect(ship.isHorizontal).toBe(true);
     expect(ship.hits).toBe(0);
     expect(ship.sunk).toBe(false);
   });
