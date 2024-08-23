@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battleship</title>
+</head>
+<body>
+  <dialog id="ship-placement-dialog">
+    <div class="dialog-header">Place your ships</div>
+    <div class="dialog-container">
+      <div id="gameboard-container">
+
+      </div>
+      <div class="ships-container">
+        <div class="ship carrier-container" draggable="true" data-ship="carrier" data-length="5"></div>
+        <div class="ship battleship-container" draggable="true" data-ship="battleship" data-length="4"></div>
+        <div class="ship cruiser-container" draggable="true" data-ship="cruiser" data-length="3"></div>
+        <div class="ship submarine-container" draggable="true" data-ship="submarine" data-length="3"></div>
+        <div class="ship destroyer-container" draggable="true" data-ship="destroyer" data-length="2"></div>
+      </div>
+    </div>
+    <button id="confirm-button" disabled="true">Confirm placement</button>
+
+  </dialog>
+ 
+</body>
+</html>

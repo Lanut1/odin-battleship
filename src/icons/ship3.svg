@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<svg width="100" height="125" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" enable-background="new 0 0 100 100" version="1.1" xml:space="preserve">
+ <g class="layer">
+  <title>Layer 1</title>
+  <path d="m92.17,51.54" fill="#000000" id="svg_1" stroke="#ED1C24" stroke-miterlimit="10" stroke-width="0.5"/>
+  <path d="m17.02,54.7" fill="#000000" id="svg_2" stroke="#ED1C24" stroke-miterlimit="10" stroke-width="0.5"/>
+  <path d="m48.92,46.5" fill="#000000" id="svg_3" stroke="#ED1C24" stroke-miterlimit="10" stroke-width="0.5"/>
+  <path d="m42.34,46.56" fill="#000000" id="svg_4" stroke="#ED1C24" stroke-miterlimit="10" stroke-width="0.5"/>
+  <path d="m4.38,60.99" id="svg_5"/>
+  <path d="m7.36,60.99l-4.47,-4.52l14.13,0.01l0,-1.78l12.02,0l-0.01,-2.45l12.01,0l-0.04,-2.62l1.34,0l0,-3.07l5.66,0l0.69,-12.4l-2.44,0l0.01,-0.64l2.43,0l0.12,-4.33l0.4,0l0.08,4.27l2.27,0l0.02,0.7l-2.24,0l0.66,12.4l3.45,0l-0.04,-4.78c-0.57,-0.27 -0.97,-0.85 -0.97,-1.53l0,0c0,-0.93 0.75,-1.69 1.69,-1.69l1.14,0c0.93,0 1.69,0.76 1.69,1.69l0,0c0,0.65 -0.37,1.22 -0.92,1.5l0.02,4.63l2.81,0l0,4.18l9.07,0l0,0.97l24.23,0.01l2.82,-0.16l-7.24,9.61" id="svg_6"/>
+  <path d="m7.36,55.69l6.47,0l0,-4.5c0,0 -6.38,-0.19 -6.47,4.5z" id="svg_7"/>
+  <path d="m27.38,53.9l-6.47,0l0,-4.5c0,0 6.38,-0.19 6.47,4.5z" id="svg_8"/>
+  <path d="m79.77,51l-6.47,0l0,-4.5c0,0 6.38,-0.19 6.47,4.5z" id="svg_9"/>
+  <path d="m8.63,51.98l-3.89,-1.42l-0.24,0.65l3.49,1.27c0,0 0.3,-0.31 0.64,-0.5z" id="svg_10"/>
+  <path d="m25.9,50.15l3.9,-1.42l0.23,0.64l-3.48,1.27c0,0 -0.31,-0.3 -0.65,-0.49z" id="svg_11"/>
+  <path d="m78.24,47.21l3.89,-1.42l0.24,0.65l-3.49,1.27c0,0 -0.3,-0.3 -0.64,-0.5z" id="svg_12"/>
+ </g>
+</svg>

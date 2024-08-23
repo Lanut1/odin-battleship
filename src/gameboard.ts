@@ -60,6 +60,7 @@ export class Gameboard implements IGameboard {
     }
 
     this.totalShips.push(ship);
+    console.log(this.totalShips);
   }
 
   receiveAttack(x: number, y: number): hitMessage {
