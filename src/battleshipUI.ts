@@ -25,9 +25,12 @@ export class GameboardUI {
   }
 
   placeShip(x: number, y: number, length: number, type: string, isHorizontal: boolean) {
+    console.log(isHorizontal);
     for (let i = 0; i < length; i++) {
       let newX = isHorizontal ? x : x + i;
+      console.log(newX);
       let newY = isHorizontal ? y + i : y;
+      console.log(newY);
       const cell = this.gameboard.querySelector(`[data-x="${newX}"][data-y="${newY}"]`) as HTMLElement;
       if (cell) {
         cell.classList.add('ship', type);

@@ -59,8 +59,9 @@ export class Gameboard implements IGameboard {
       cell.placeShip(ship);
     }
 
+    ship.startX = x;
+    ship.startY = y;
     this.totalShips.push(ship);
-    console.log(this.totalShips);
   }
 
   receiveAttack(x: number, y: number): hitMessage {

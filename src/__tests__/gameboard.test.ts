@@ -12,7 +12,7 @@ describe('Gameboard', () => {
 
   test('places a ship correctly', () => {
     const gameboard = new Gameboard(10);
-    const ship = new Ship(3, true); // Assuming the Ship constructor takes length and isHorizontal
+    const ship = new Ship(3, 'submarine', true); // Assuming the Ship constructor takes length and isHorizontal
 
     gameboard.placeShip(ship, 0, 0);
 
@@ -24,14 +24,14 @@ describe('Gameboard', () => {
 
   test('throws error when placing a ship out of bounds', () => {
     const gameboard = new Gameboard(10);
-    const ship = new Ship(4, true);
+    const ship = new Ship(4, 'battleship', true);
 
     expect(() => gameboard.placeShip(ship, 9, 9)).toThrow('Ship placement exceeds board boundaries');
   });
 
   test('handles attacks correctly', () => {
     const gameboard = new Gameboard(10);
-    const ship = new Ship(2, true);
+    const ship = new Ship(2, 'destroyer', true);
     gameboard.placeShip(ship, 0, 0);
 
     let result = gameboard.receiveAttack(0, 0);
@@ -46,8 +46,8 @@ describe('Gameboard', () => {
 
   test('checks if all ships are sunk', () => {
     const gameboard = new Gameboard(10);
-    const ship1 = new Ship(2, true);
-    const ship2 = new Ship(3, false);
+    const ship1 = new Ship(2, 'destroyer', true);
+    const ship2 = new Ship(3, 'cruiser', false);
 
     gameboard.placeShip(ship1, 0, 0);
     gameboard.placeShip(ship2, 2, 1);
