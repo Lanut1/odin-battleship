@@ -5,6 +5,7 @@ interface ICell {
   isHit: boolean;
   placeShip(ship: Ship): void;
   hitCell(): Ship | null;
+  resetCell(): void;
 }
 
 export class Cell implements ICell {
@@ -23,5 +24,10 @@ export class Cell implements ICell {
   hitCell(): Ship | null {
     this.isHit = true;
     return this.hasShip;
+  }
+
+  resetCell(): void {
+    this.hasShip = null;
+    this.isHit = false;
   }
 }

@@ -15,6 +15,8 @@ interface IGameboard {
   placeShip(ship: Ship, x: number, y: number): void;
   receiveAttack(x: number, y: number): hitMessage;
   areAllSunk(): boolean;
+  resetBoard(): void;
+  cellsAroundSunkShip(ship: Ship): string[];
 }
 
 export class Gameboard implements IGameboard {
@@ -47,8 +49,8 @@ export class Gameboard implements IGameboard {
         let checkY = ship.isHorizontal ? y + i : y + j;
 
         if (checkX < 0 || checkX >= this.size || checkY < 0 || checkY >= this.size) continue;
-        
-        if (this.board[checkX][checkY].hasShip) {
+
+        if (this.board[checkX][checkY].hasShip !== null) {
           throw new Error("Ship cannot be placed due to proximity to another ship");
         }
       }
@@ -71,7 +73,7 @@ export class Gameboard implements IGameboard {
 
     const cell = this.board[x][y];
 
-    if (cell.isHit) {
+    if (cell.isHit === true) {
       throw new Error("This cell has already been attacked");
     }
 
@@ -98,5 +100,34 @@ export class Gameboard implements IGameboard {
 
   areAllSunk(): boolean {
     return this.totalShips.every((ship) => ship.isSunk() === true);
+  }
+
+  resetBoard() {
+    this.totalShips = [];
+    this.allSunk = false;
+    this.board.forEach(row => row.forEach(cell => cell.resetCell()));
+  }
+
+  cellsAroundSunkShip(ship: Ship): string[] {
+    const cells: string[] = [];
+    let x = ship.startX;
+    let y = ship.startY;
+    if (x !== null && y !== null) {
+      for (let i = -1; i <= ship.length; i++) {
+        for (let j = -1; j <= 1; j++) {
+          let checkX = ship.isHorizontal ? x + j : x + i;
+          let checkY = ship.isHorizontal ? y + i : y + j;
+
+          if (checkX < 0 || checkX >= this.size || checkY < 0 || checkY >= this.size) continue;
+
+          if (this.board[checkX][checkY].hasShip) continue;
+
+          this.board[checkX][checkY].isHit = true;
+          cells.push(`${checkX},${checkY}`);
+        }
+      }
+    }
+
+    return cells;
   }
 }

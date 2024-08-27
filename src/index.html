@@ -7,23 +7,43 @@
 </head>
 <body>
   <dialog id="ship-placement-dialog">
-    <div class="dialog-header">Place your ships</div>
-    <div class="dialog-container">
-      <div id="gameboard-container"></div>
-      <div class="ships-container">
-        <div class="ship carrier-container" draggable="true" data-ship="carrier" data-length="5" data-horizontal="true"></div>
-        <div class="ship battleship-container" draggable="true" data-ship="battleship" data-length="4" data-horizontal="true"></div>
-        <div class="ship cruiser-container" draggable="true" data-ship="cruiser" data-length="3" data-horizontal="true"></div>
-        <div class="ship submarine-container" draggable="true" data-ship="submarine" data-length="3" data-horizontal="true"></div>
-        <div class="ship destroyer-container" draggable="true" data-ship="destroyer" data-length="2" data-horizontal="true"></div>
+    <div class="content-container">
+      <div class="dialog-header">Place your ships</div>
+      <div class="dialog-container">
+        <div id="gameboard-container"></div>
+        <div class="ships-container">
+          <div class="ship carrier-container" draggable="true" data-ship="carrier" data-length="5" data-horizontal="true"></div>
+          <div class="ship battleship-container" draggable="true" data-ship="battleship" data-length="4" data-horizontal="true"></div>
+          <div class="ship cruiser-container" draggable="true" data-ship="cruiser" data-length="3" data-horizontal="true"></div>
+          <div class="ship submarine-container" draggable="true" data-ship="submarine" data-length="3" data-horizontal="true"></div>
+          <div class="ship destroyer-container" draggable="true" data-ship="destroyer" data-length="2" data-horizontal="true"></div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="confirm-button" disabled="true">Start</button>
+        <button id="reset-button">Reset</button>
+        <button id="rotate-button">Rotate</button>
       </div>
     </div>
-    <button id="confirm-button" disabled="true">Confirm placement</button>
   </dialog>
+
+  <div class="message-container"></div>
   <div class="main-section">
     <div id="player-gameboard-container"></div>
     <div class="middle"></div>
     <div id="computer-gameboard-container"></div>
   </div>
+
+  <dialog id="result-dialog">
+    <div class="results-container">
+      <div class="result-message"></div>
+      <div class="result-buttons">
+        <button class="start-new-game">New Game</button>
+        <button class="view-code">View Code</button>
+      </div>
+    </div>
+
+  </dialog>
+
 </body>
 </html>

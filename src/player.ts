@@ -1,14 +1,15 @@
 import { Gameboard } from "./gameboard";
-import { GameboardUI } from "./battleshipUI";
 
 interface IPlayer {
   type: string;
   gameboard: Gameboard;
+  attackCells: Set<string>;
 }
 
 export class Player implements IPlayer {
   type: string;
   gameboard: Gameboard;
+  attackCells: Set<string> = new Set;
 
   constructor(type: string = 'real', boardOrSize: Gameboard | number) {
     this.type = type;
@@ -17,6 +18,5 @@ export class Player implements IPlayer {
     } else {
       this.gameboard = new Gameboard(boardOrSize);
     }
-    
   }
 }
